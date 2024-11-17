@@ -399,23 +399,27 @@
           "description": " Specify an email address to create the user as a Snappy user through ``snap create-user``. If an Ubuntu SSO account is associated with the address, username and SSH keys will be requested from there.",
           "type": "string"
         },
+        "ssh_authorized_keys_url": {
+          "description": "url containing ssh keys to add to user's authkeys file. can not be combined with **ssh_redirect_user**.",
+          "type": "string"
+        },
         "ssh_authorized_keys": {
-          "description": "List of SSH keys to add to user's authkeys file. Can not be combined with **ssh_redirect_user**.",
+          "description": "list of ssh keys to add to user's authkeys file. can not be combined with **ssh_redirect_user**.",
           "type": "array",
           "items": {
             "type": "string"
           },
-          "minItems": 1
+          "minitems": 1
         },
         "ssh-authorized-keys": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "minItems": 1,
+          "minitems": 1,
           "deprecated": true,
           "deprecated_version": "18.3",
-          "deprecated_description": "Use **ssh_authorized_keys** instead."
+          "deprecated_description": "use **ssh_authorized_keys** instead."
         },
         "ssh-import-id": {
           "type": "array",
